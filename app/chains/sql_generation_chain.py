@@ -64,9 +64,10 @@ Question:
 
     # Generate SQL
     response = llm.invoke(prompt)
-    response = llm.invoke(prompt)
+    #response = llm.invoke(prompt)
 
     raw_sql = response.content
+    print(raw_sql)
     clean_sql = clean_sql_output(raw_sql)
 
     return clean_sql
