@@ -1,7 +1,25 @@
-streamlit
+# Core LLM + LangChain
 langchain
+langchain-core
+langchain-community
 langchain-openai
+
+# OpenAI
 openai
-sqlalchemy
+
+# Vector DB
+faiss-cpu
+
+# Embeddings / Tokenization
+tiktoken
+
+# App UI
+streamlit
+
+# Environment variables
 python-dotenv
+
+# Data handling
 pandas
+numpy
+

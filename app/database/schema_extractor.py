@@ -1,13 +1,11 @@
 from sqlalchemy import inspect
 from app.database.connection import get_engine
 
-
 def extract_schema():
     engine = get_engine()
     inspector = inspect(engine)
 
-    tables = inspector.get_table_names()
-    
+    tables = inspector.get_table_names()    
 
     schema_description = []
 
