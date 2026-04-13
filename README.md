@@ -34,17 +34,54 @@ DataInsights follows a multi-stage pipeline:
 
 ## Tech Stack
 
-LLM: gpt-4.1-mini
-Framework: LangChain
-Vector Store: FAISS
-Frontend: Streamlit
-Database: SQLite (Olist dataset)
-Embeddings: OpenAI Embeddings (`text-embedding-3-small`)
+* LLM: gpt-4.1-mini
+* Framework: LangChain
+* Vector Store: FAISS
+* Frontend: Streamlit
+* Database: SQLite (Olist dataset)
+* Embeddings: OpenAI Embeddings (`text-embedding-3-small`)
 
 
 ## Dataset
 
 This project uses the **Brazilian Olist E-commerce Dataset**, which contains real-world e-commerce transaction data.
+
+## 📁 Project Structure
+
+```text
+AI-PROJECT/
+│
+├── app/
+│   ├── database/
+│   │   ├── connection.py            # Database connection setup
+│   │   ├── query_executor.py        # Executes SQL queries
+│   │   ├── schema_extractor.py      # Extracts database schema
+│   │
+│   ├── rag/
+│   │   ├── rag_pipeline.py          # FAISS vector store + embeddings
+│   │
+│   ├── chains/
+│   │   ├── sql_generation_chain.py  # Converts NL → SQL using LLM
+│   │   ├── result_explainer.py     # Generates natural language explanations
+│   │
+│   ├── pipeline/
+│   │   ├── self_correcting_pipeline.py  # Handles SQL errors & retries
+│   │
+│   ├── ui/
+│   │   ├── main.py                  # Streamlit UI
+│
+├── data/
+│   ├── olist.sqlite                    # Database file
+│
+├── DataInsights-Report.pdf       # Project report
+│                    
+│
+├── requirements.txt                 # Dependencies
+├── .env                             # API keys (not committed)
+├── .gitignore                       # Ignored files
+├── README.md                        # Documentation
+```
+
 
 
 ##  How to run
