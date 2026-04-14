@@ -144,5 +144,8 @@ streamlit run app/ui/main.py
 * Natural Language Processing (NLP) 
 * Explainable AI (XAI) 
 
+## Presentation Video Link
+https://drive.google.com/file/d/1BpwPQfNbzZrqYCY05OQlyPFgI5AEI9PH/view?usp=drive_link
+
 
 
